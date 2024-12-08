@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Hex Calculator for Embedded Systems</h2>
+        <form action="/calculate" method="post">
+            <div class="form-group">
+                <label for="bits">Enter Bit Positions (comma-separated):</label>
+                <input type="text" class="form-control" id="bits" name="bits" required>
+            </div>
+            <div class="form-group">
+                <label for="operation">Select Operation:</label>
+                <select class="form-control" id="operation" name="operation" required>
+                    <option value="Set (OR - |)">Set (OR - |)</option>
+                    <option value="Test (AND - &)">Test (AND - &)</option>
+                    <option value="Clear (AND - &)">Clear (AND - &)</option>
+                    <option value="Clear (AND - &, Neg ~)">Clear (AND - &, Neg ~)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="register_size">Enter Register Size (e.g., 32):</label>
+                <input type="number" class="form-control" id="register_size" name="register_size" value="32" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
